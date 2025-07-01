@@ -9,6 +9,7 @@ from utils.config import get_model_info
 
 def get_client_and_id(model_name):
     model_info = get_model_info(model_name)
+    print(model_info)
     OPENAI_API_KEY = model_info['key']
     BASE_URL = model_info['URL']
     client = OpenAI(api_key=OPENAI_API_KEY, base_url=BASE_URL)
@@ -21,6 +22,10 @@ def context_init(
     system_prompt: str = 'You are an AI assistant'
 ):
     context = [{'role': 'system', 'content': system_prompt}]
+    return context
+
+def context_input(msg, context: list):
+    context.append({'role': 'user', 'content': msg})
     return context
 
 def chat_normal(model_name, context: list):
@@ -61,19 +66,20 @@ async def chat_stream(model_name, context: list):
 def demo(model_name):
     context = context_init()
     loop = asyncio.get_event_loop()
+    mode = input("Stream?(y): ").lower()
     while True:
         msg = input("> ")
-        if msg.lower() in ('q', 'exit', 'quit'):
+        if msg.lower() in ('q', 'exit', 'quit', 'bye'):
+            loop.close()
             sys.exit(0)
-        mode = input("Stream?(y): ").lower()
+        context = context_input(msg, context)
         if mode == 'y':
             res = loop.run_until_complete(chat_stream(model_name, context))
-            print('GPT: ', res)
+            # print('GPT: ', res)
         else:
             reply = chat_normal(model_name, context)
             print('GPT: ', reply)
-        print('\nCONTEXT: ', context)
+        # print('\nCONTEXT: ', context)
 
 if __name__ == "__main__":
     pass
-# TODO: add user content to context
