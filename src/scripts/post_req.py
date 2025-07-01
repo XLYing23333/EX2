@@ -3,7 +3,7 @@ import requests
 def Chat_OLLAMA(
     prompt: str = "Hi", 
     url: str = "http://localhost:11434/api/chat", 
-    model_name: str = 'deepseek-r1:8b',
+    model_name: str = 'qwen3:8b',
     output_stream: bool = False
 ):
     data = {

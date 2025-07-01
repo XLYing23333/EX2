@@ -3,25 +3,21 @@ APP_NAME = "ChatHere"
 VERSION = "V1.1"
 AUTHOR = "XLY23333"
 
-[MODEL.OLLAMA.Qwen25-CODER-OLLAMA]
+[MODEL.OLLAMA.Qwen-2dot5-CODER-OLLAMA]
 URL = "http://localhost:11434/api/chat"
 ID = "qwen2.5-coder:latest"
 
-[MODEL.OLLAMA.deepseek-R1-8B-OLLAMA]
+[MODEL.OLLAMA.DeepSeek-R1-8B-OLLAMA]
 URL = "http://localhost:11434/api/chat"
 ID = "deepseek-r1:8b"
 
-[MODEL.OLLAMA.deepseek-R1-14B-OLLAMA]
+[MODEL.OLLAMA.DeepSeek-R1-14B-OLLAMA]
 URL = "http://localhost:11434/api/chat"
 ID = "deepseek-r1:14b"
 
-[MODEL.CA.DeepSeek-r1]
-URL = "https://api.chatanywhere.tech"
-ID = "deepseek-r1"
-
-[MODEL.CA.DeepSeek-v3]
-URL = "https://api.chatanywhere.tech"
-ID = "deepseek-v3"
+[MODEL.OLLAMA.LLAMA-3dot1-8B-OLLAMA]
+URL = "http://localhost:11434/api/chat"
+ID = "llama3.1:8b "
 
 [MODEL.CA.GPT-4dot1-mini]
 URL = "https://api.chatanywhere.tech"
@@ -31,14 +27,23 @@ ID = "gpt-4.1-mini"
 URL = "https://api.chatanywhere.tech"
 ID = "gpt-4o-mini"
 
+[MODEL.CA.DeepSeek-R1]
+URL = "https://api.chatanywhere.tech"
+ID = "deepseek-r1"
+
+[MODEL.CA.DeepSeek-V3]
+URL = "https://api.chatanywhere.tech"
+ID = "deepseek-v3"
+
+
 [MODEL.SF.DS-R1-FULL]
-url = "https://api.siliconflow.cn/v1"
+URL = "https://api.siliconflow.cn/v1"
 ID = "deepseek-ai/DeepSeek-R1"
 
-[MODEL.SF.Qwen3-235B-A22B]
-url = "https://api.siliconflow.cn/v1"
-ID = "Qwen/Qwen3-235B-A22B"
-
 [MODEL.SF.DS-V3]
-url = "https://api.siliconflow.cn/v1"
+URL = "https://api.siliconflow.cn/v1"
 ID = "deepseek-ai/DeepSeek-V3"
+
+[MODEL.SF.Qwen3-235B-A22B]
+URL = "https://api.siliconflow.cn/v1"
+ID = "Qwen/Qwen3-235B-A22B"
