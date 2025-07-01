@@ -10,5 +10,4 @@ from utils.oa import demo
 pprint(get_full_models())
 # pprint(get_model_info('DeepSeek-r1'))
 
-demo('GPT-4dot1-mini')
-# demo('Qwen3-235B-A22B')
+demo('GPT-4o-mini')

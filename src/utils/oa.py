@@ -9,7 +9,10 @@ from utils.config import get_model_info
 
 def get_client_and_id(model_name):
     model_info = get_model_info(model_name)
-    print(model_info)
+    model_info_show = model_info.copy()
+    if model_info_show['key'] != 'None':
+        model_info_show['key'] = 'sk-*************'
+    print(model_info_show)
     OPENAI_API_KEY = model_info['key']
     BASE_URL = model_info['URL']
     client = OpenAI(api_key=OPENAI_API_KEY, base_url=BASE_URL)
