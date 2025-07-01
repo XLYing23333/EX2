@@ -1,0 +1,10 @@
+[APP]
+APP_NAME = "ChatHere"
+VERSION = "v1.0"
+AUTHOR = "XLY23333"
+
+[MODEL]
+URL="http://localhost:11434/api/chat"
+MODELS=["qwen2.5-coder:latest", "deepseek-r1:8b", "deepseek-r1:14b"]
+
+
