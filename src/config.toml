@@ -3,17 +3,17 @@ APP_NAME = "ChatHere"
 VERSION = "V1.1"
 AUTHOR = "XLY23333"
 
-[MODEL.OLLAMA.Qwen-2dot5-CODER-OLLAMA]
+[MODEL.OLLAMA.Qwen-3-8B-OLLAMA]
 URL = "http://localhost:11434/api/chat"
-ID = "qwen2.5-coder:latest"
+ID = "qwen3:8b"
 
 [MODEL.OLLAMA.DeepSeek-R1-8B-OLLAMA]
 URL = "http://localhost:11434/api/chat"
 ID = "deepseek-r1:8b"
 
-[MODEL.OLLAMA.DeepSeek-R1-14B-OLLAMA]
+[MODEL.OLLAMA.Gemma-3-12B-OLLAMA]
 URL = "http://localhost:11434/api/chat"
-ID = "deepseek-r1:14b"
+ID = "gemma3:12b"
 
 [MODEL.OLLAMA.LLAMA-3dot1-8B-OLLAMA]
 URL = "http://localhost:11434/api/chat"

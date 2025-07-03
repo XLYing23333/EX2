@@ -3,7 +3,7 @@ import requests
 def Chat_OLLAMA(
     prompt: str = "Hi", 
     url: str = "http://localhost:11434/api/chat", 
-    model_name: str = 'qwen3:8b',
+    model_name: str = 'gemma3:12b',
     output_stream: bool = False
 ):
     data = {
@@ -25,7 +25,7 @@ def Chat_OLLAMA(
     # return response.json()['message']['content']
     
 if __name__ == '__main__':
-    prompt = " hi , who are you ? "
+    prompt = input('> ')
     response = Chat_OLLAMA(prompt)
     print(response)
     print("="*50)
