@@ -1,0 +1,1 @@
+chainlit run main.py -w --port 1142

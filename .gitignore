@@ -1,3 +1,6 @@
 src/tmp
 .env
 LangChainDoc
+py_files.txt
+data
+.vscode
