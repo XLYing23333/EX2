@@ -90,6 +90,7 @@ def get_model_info(model_id):
     return msg
 
 def get_full_models():
+    print("[DATA] ALL MODELS:")
     config = get_config()
     if 'MODEL' not in config or not isinstance(config['MODEL'], dict):
         raise KeyError("MODEL section missing or invalid in config")
